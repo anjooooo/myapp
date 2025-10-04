@@ -54,3 +54,12 @@ def delete_user(user_id: int):
             fake_users.remove(user)
             return {"massage": "User deleted"}
     raise HTTPException(status_code=404, detail="User not found")
+
+@app.get("/error")
+def trigger_error():
+    raise HTTPException(status_code=500, detail="This is a simulated error")
+# from fastapi.middleware.cors import CORSMiddleware
+# from fastapi import FastAPI
+# from app.routes import router
+# from app.database import engine, Base
+
