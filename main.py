@@ -63,3 +63,17 @@ def trigger_error():
 # from app.routes import router
 # from app.database import engine, Base
 
+app = FastAPI()
+# Base.metadata.create_all(bind=engine)
+
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=["*"],
+#     allow_credentials=True,
+#     allow_methods=["*"],
+#     allow_headers=["*"],
+# )
+# app.include_router(router)
+# @app.get("/")
+# def root():
+#     return {"message": "Hello FastAPI!"}
